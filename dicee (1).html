@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dicee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Refresh Me</h1>
+
+    <div class="dice">
+      <p>Player 1</p>
+      <img class="img1" src="images/dice6.png">
+    </div>
+
+    <div class="dice">
+      <p>Player 2</p>
+      <img class="img2" src="images/dice6.png">
+    </div>
+
+  </div>
+
+  <script>
+    // Create a reference to the img1 element
+     var randomNumber1 = Math.floor();
+    // Create a reference to the img2 element
+    var randomDiceImage = "dice" + randomNumber1;
+
+    // Generate a random number between 1 and 6 for the first dice
+    var randomImageSource ="images/dice1.png";
+    // Generate a random number between 1 and 6 for the second dice
+    var image1 = document.querySelector('img1');
+    // Build the URL of the first dice image using the random number - ./images/dice${rand}.png ==> rand=2 ./images/dice2.png, etc.
+    image1.setAttribute("src",randomNumber1);
+    // Build the URL of the second dice image using the random number - ./images/dice${rand}.png ==> rand=2 ./images/dice2.png, etc.
+    var randomNumber2 = Math.floor();
+    // Set the img1 src attribute to the first dice image URL
+    var randomImageSource = "images/dice2.png";
+
+    // Set the img2 src attribute to the second dice image URL
+
+    // If player 1 wins, display "Player 1 Wins!" in the h1 element, otherwise if player 2 wins, display "Player 2 Wins!" in the h1 element, otherwise display "Draw!" in the h1 element
+    if(randomNumber1 > randomNumber2){
+      document.querySelector('img1') ="Player 1 Wins";
+        }
+        else if (randomNumber2> randomNumber1){
+          document.querySelector('img2') = "Player 2 Wins";
+        }
+        else{
+          document.querySelector('img1') = "Draw";
+        }
+  </script>
+
+</body>
+
+<footer>
+  www 🎲 App Brewery 🎲 com
+</footer>
+
+</html>
